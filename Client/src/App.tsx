@@ -1,7 +1,10 @@
 export function App() {
   return (
-    <main className="grid min-h-screen place-items-center">
-      <h1 className="text-3xl font-bold">SliceReel</h1>
+    <main className="bg-bg text-fg grid min-h-screen place-items-center">
+      <div>
+        <h1 className="text-4xl font-extrabold">SliceReel</h1>
+        <span className="rgb-bar mt-4" />
+      </div>
     </main>
   )
 }

@@ -1,0 +1,67 @@
+/*
+ * Raw design tokens from the "Clip cutter" design.
+ * Dark mode follows the OS unless <html data-theme="light|dark"> forces one.
+ */
+:root {
+  color-scheme: light;
+
+  --bg: #ffffff;
+  --surface: #f1f1f2;
+  --surface-2: #e3e3e4;
+  --text: #161823;
+  --muted: rgb(22 24 35 / 0.74);
+  --line: rgb(22 24 35 / 0.12);
+  --remain: #dadadd;
+  --frame: #000000;
+  --danger-bg: rgb(254 44 85 / 0.08);
+
+  --red: #fe2c55;
+  --red-hover: #e6284d;
+  --on-red: #ffffff;
+  --cyan: #25f4ee;
+  --cyan-ink: #00918d;
+
+  /* Round swatches cycle in this order; each ink keeps its label readable. */
+  --round-1: #25f4ee;
+  --round-1-ink: #000000;
+  --round-2: #fe2c55;
+  --round-2-ink: #ffffff;
+  --round-3: #8ef7f3;
+  --round-3-ink: #000000;
+  --round-4: #ff8aa2;
+  --round-4-ink: #000000;
+  --round-5: #14b8b3;
+  --round-5-ink: #000000;
+  --round-6: #d61f48;
+  --round-6-ink: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --bg: #000000;
+    --surface: #121212;
+    --surface-2: #1f1f1f;
+    --text: #ffffff;
+    --muted: rgb(255 255 255 / 0.72);
+    --line: rgb(255 255 255 / 0.14);
+    --remain: #2f2f2f;
+    --danger-bg: rgb(254 44 85 / 0.12);
+    --cyan-ink: #25f4ee;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #000000;
+  --surface: #121212;
+  --surface-2: #1f1f1f;
+  --text: #ffffff;
+  --muted: rgb(255 255 255 / 0.72);
+  --line: rgb(255 255 255 / 0.14);
+  --remain: #2f2f2f;
+  --danger-bg: rgb(254 44 85 / 0.12);
+  --cyan-ink: #25f4ee;
+}
