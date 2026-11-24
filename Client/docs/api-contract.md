@@ -68,6 +68,7 @@ One stream per video. Each message's `data` is JSON with a `type`:
 | `404` | `not_found`         | Unknown video, round or clip, or another session's  |
 | `409` | `cursor_moved`      | `CutRequest.startSec` is not the current cursor     |
 | `409` | `not_last_round`    | Undo was asked for a round that is not the last one |
+| `409` | `not_ready`         | Download of a clip or round that is still cutting   |
 | `410` | `expired`           | The video was auto-deleted                          |
 | `413` | `file_too_large`    | Upload is over the size limit (2 GB by default)     |
 | `415` | `unsupported_media` | The file is not a readable video                    |
